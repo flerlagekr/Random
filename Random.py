@@ -31,7 +31,7 @@ def end_function(msg=''):
 def lambda_handler(event, context):
     # Get the Google Sheets credentials from S3
     s3 = boto3.client('s3')
-    bucket = "flerlage-lambda"
+    bucket = "<bucket name>"
     key = "creds.json"
     object = s3.get_object(Bucket=bucket, Key=key)
     content = object['Body']
